@@ -37,7 +37,7 @@ class MainWindow(QMainWindow):
         self.connect_db()
         cursor = self.connection.cursor()
         cursor.execute("CREATE TABLE IF NOT EXISTS trip (departure TEXT, destination TEXT, price REAL, transport TEXT)")
-        cursor.execute("SELECT * FROM trip")
+        cursor.execute("SELECT * FROM Itog")
         rows = cursor.fetchall()
 
         self.ui.tableWidget.setRowCount(0)
